@@ -1,0 +1,10 @@
+insert into demo values (1, '1');
+insert into demo values (2, '2');
+insert into demo values (3, '3');
+insert into demo values (4, '4');
+insert into demo values (5, '5');
+insert into demo values (6, '6');
+insert into demo values (7, '7');
+insert into demo values (8, '8');
+insert into demo values (9, '9');
+insert into demo values (10, '10');
