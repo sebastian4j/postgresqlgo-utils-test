@@ -14,6 +14,9 @@ import (
 	"github.com/testcontainers/testcontainers-go/wait"
 )
 
+// Setup levanta la base de datos postgres en docker usando testcontainers,
+// define las variables POSTGRES_HOST, POSTGRES_PORT, POSTGRES_USER, POSTGRES_PASSWORD
+// y POSTGRES_DB
 func Setup(t *testing.T) testcontainers.Container {
 	ctx := context.Background()
 	req := testcontainers.ContainerRequest{
@@ -45,6 +48,7 @@ func Setup(t *testing.T) testcontainers.Container {
 	return rc
 }
 
+// LoadScript carga un script en forma secuencial
 func LoadScript(file *os.File, p *postgresqlgo.Postgresqlgo) bool {
 	scanner := bufio.NewScanner(file)
 	var sb strings.Builder
